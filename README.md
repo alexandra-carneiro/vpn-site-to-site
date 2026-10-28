@@ -55,4 +55,4 @@ Para abrir os ficheiros `.pkt` é preciso o Cisco Packet Tracer (gratuito com co
 - Projeto académico, em ambiente simulado. A empresa, os endereços IP públicos e os dados são fictícios.
 - Os parâmetros de criptografia (grupo Diffie-Hellman 5, SHA-1) são os mais fortes suportados pelo Packet Tracer; em produção real usam-se os recomendados pelo NIST (grupo 14, SHA-256). Isto está explicado na Fase 2.
 - A chave pré-partilhada que aparece na documentação é um exemplo de laboratório, não uma credencial real.
-- A tabela de preços da Fase 6 usa como referência um orçamento fornecido pelo formador da UC.
+- Os preços da tabela da Fase 6 foram pesquisados pela autora e incluem IVA.
