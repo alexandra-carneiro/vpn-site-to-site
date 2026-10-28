@@ -1,8 +1,10 @@
 # VPN Site-to-Site
 
-Trabalho da UC 00639 do CET em Gestão de Redes e Sistemas Computacionais (IEFP, Tomar, 2026).
-
 **Responsável técnica:** Alexandra Carneiro (Técnica de Redes e Segurança)
+
+![Topologia da rede — Lisboa e Porto](topologia.png)
+
+*Topologia da rede: sede em Lisboa (servidores, switch e gateway pfSense) ligada à filial no Porto (gateway pfSense, switch e postos de trabalho) por um túnel VPN IPsec.*
 
 ## O projeto
 
@@ -52,7 +54,7 @@ Para abrir os ficheiros `.pkt` é preciso o Cisco Packet Tracer (gratuito com co
 
 ## Notas
 
-- Projeto académico, em ambiente simulado. A empresa, os endereços IP públicos e os dados são fictícios.
+- Projeto em ambiente simulado. A empresa, os endereços IP públicos e os dados são fictícios.
 - Os parâmetros de criptografia (grupo Diffie-Hellman 5, SHA-1) são os mais fortes suportados pelo Packet Tracer; em produção real usam-se os recomendados pelo NIST (grupo 14, SHA-256). Isto está explicado na Fase 2.
 - A chave pré-partilhada que aparece na documentação é um exemplo de laboratório, não uma credencial real.
-- Os preços da tabela da Fase 6 foram pesquisados pela autora e incluem IVA.
+- Os preços da tabela da Fase 6 foram pesquisados pela autora e incluem IVA. Orçamento total do material: €1.650,13.
