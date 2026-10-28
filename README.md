@@ -56,7 +56,7 @@ Sobre a criptografia: o NIST recomenda DH grupo 14 e SHA-256 para produção rea
 3. **Configuração e implementação** - túnel IPsec/IKE entre os dois gateways, com a configuração ativa aplicada nos dois lados. Validação: ISAKMP SA no estado QM_IDLE, contadores ESP de encriptação e desencriptação, ping bidirecional Lisboa-Porto com 0% de perda e acesso web ao servidor central.
 4. **Testes e validação** - matriz de 9 testes, todos aprovados (ver tabela abaixo).
 5. **Incidentes** - 5 incidentes diagnosticados e resolvidos (ver tabela abaixo).
-6. **Gestão da intervenção** - métricas previsto vs. real, orçamento, riscos e aprovação formal. A intervenção durou mais 3 horas do que o previsto por causa do diagnóstico e da resolução dos 5 incidentes; o desvio foi absorvido pela margem de contingência de 4 horas. Ponto de decisão Go/No-Go no sábado às 12:30.
+6. **Gestão da intervenção** - métricas previsto vs. real, riscos e aprovação formal. A intervenção durou mais 3 horas do que o previsto por causa do diagnóstico e da resolução dos 5 incidentes; o desvio foi absorvido pela margem de contingência de 4 horas. Ponto de decisão Go/No-Go no sábado às 12:30.
 7. **Relatório final consolidado** - sumário executivo, arquitetura, testes e troubleshooting. Regras de firewall finais: UDP 500 (IKE), UDP 4500 (NAT-T), IP Protocol 50 (ESP), ICMP entre as duas redes, DNS porta 53 e SMB portas 445/139 para 192.168.10.10. Recomendações: monitorização SNMP/Syslog dos gateways e auditorias semestrais às chaves PSK.
 
 O documento consolidado com as 7 fases é o `VPN-Site-to-Site-Lisboa-Porto.pdf`. Cada fase também está em separado na pasta `fases/`.
@@ -104,23 +104,6 @@ Cada incidente tem o seu ficheiro Packet Tracer na pasta `packet-tracer/`, com o
 <img src="imagens/incidente-gateway-errado.png" width="700" alt="Painel DHCP do pool POOL-PORTO com o gateway errado">
 
 *Incidente 5: o DHCP distribuía o gateway inexistente 192.168.20.254 em vez de 192.168.20.1.*
-
-## Orçamento
-
-Aquisição de equipamentos e cablagem para a filial do Porto. Os preços foram pesquisados pela autora e incluem IVA.
-
-| Item | Quantidade | Preço unitário | Valor total |
-| --- | --- | --- | --- |
-| Gateway/Router Ubiquiti UniFi UDM-Pro / pfSense Gigabit Dual WAN | 1 un. | €439,00 | €439,00 |
-| Switch gerível 24P Ubiquiti UniFi USW-24-POE (24 portas PoE+ / SFP) | 1 un. | €427,72 | €427,72 |
-| Bastidor de parede 19" 12U (53x40x60 cm) | 1 un. | €135,00 | €135,00 |
-| UPS/No-Break Salicru SPS 750 Advance R2 Rack 1U | 1 un. | €310,14 | €310,14 |
-| Cablagem UTP Cat6, caixa de 305m | 1 caixa | €160,08 | €160,08 |
-| Patch Panel 24P RJ45 Cat6 1U | 1 un. | €47,99 | €47,99 |
-| Tomadas RJ45 duplas Cat6 de parede | 10 un. | €8,50 | €85,00 |
-| Patch cords 0,5m RJ45 Cat6 | 20 un. | €1,01 | €20,20 |
-| Patch cords 3m RJ45 Cat6 | 20 un. | €1,25 | €25,00 |
-| **Total** | | | **€1.650,13** |
 
 Dimensionamento: 40 patch cords (20 curtos de 0,5m para a conectorização interna no bastidor entre o patch panel e o switch, 20 longos de 3m para ligar as tomadas murais aos postos). A filial ficou dimensionada para suportar até 20 dispositivos (10 tomadas duplas RJ45 Cat6 com cablagem redundante entre bastidor e áreas de trabalho).
 
