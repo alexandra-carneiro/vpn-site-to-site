@@ -6,7 +6,7 @@ Ligar a sede de uma empresa (Lisboa) à sua filial (Porto) com um túnel VPN IPs
 
 Empresa fictícia: TechSolutions. Ambiente simulado em Cisco Packet Tracer.
 
-![Topologia da rede - Lisboa e Porto](imagens/topologia.png)
+<img src="imagens/topologia.png" width="800" alt="Topologia da rede - Lisboa e Porto">
 
 *Topologia da rede: sede em Lisboa (servidores, switch e gateway pfSense) ligada à filial no Porto (gateway pfSense, switch e postos de trabalho) por um túnel VPN IPsec.*
 
@@ -97,11 +97,11 @@ O ipconfig confirmou o IP 192.168.20.50, o gateway 192.168.20.1 e o DNS/DHCP 192
 
 Cada incidente tem o seu ficheiro Packet Tracer na pasta `packet-tracer/`, com o problema reproduzido e a correção aplicada. A validação de cada correção foi feita com `show crypto isakmp sa`, `show crypto ipsec sa`, ping e nslookup.
 
-![Painel DHCP do pool POOL-PORTO com o DNS errado](imagens/incidente-dns-errado.png)
+<img src="imagens/incidente-dns-errado.png" width="800" alt="Painel DHCP do pool POOL-PORTO com o DNS errado">
 
 *Incidente 4: o DHCP do pool POOL-PORTO distribuía o DNS público 8.8.8.8 em vez do DNS interno.*
 
-![Painel DHCP do pool POOL-PORTO com o gateway errado](imagens/incidente-gateway-errado.png)
+<img src="imagens/incidente-gateway-errado.png" width="800" alt="Painel DHCP do pool POOL-PORTO com o gateway errado">
 
 *Incidente 5: o DHCP distribuía o gateway inexistente 192.168.20.254 em vez de 192.168.20.1.*
 
