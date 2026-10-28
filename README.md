@@ -41,7 +41,7 @@ Nota: no Packet Tracer, os gateways pfSense/UDM-Pro são representados por route
 | Perfect Forward Secrecy | Ativo, grupo 5 |
 | Tráfego protegido | 192.168.10.0/24 <-> 192.168.20.0/24 |
 
-<img src="imagens/configuracao-tunel.png" width="500" alt="Configuração do túnel no pfSense-Lisboa">
+<img src="imagens/configuracao-tunel.png" width="400" alt="Configuração do túnel no pfSense-Lisboa">
 
 *Configuração do túnel no pfSense-Lisboa: política ISAKMP, chave pré-partilhada, transform-set e interfaces.*
 
@@ -77,11 +77,11 @@ O documento consolidado com as 7 fases é o `VPN-Site-to-Site-Lisboa-Porto.pdf`.
 
 O ipconfig confirmou o IP 192.168.20.50, o gateway 192.168.20.1 e o DNS/DHCP 192.168.10.10 nos postos da filial. A inspeção de pacotes na interface WAN confirmou que ICMP, HTTP e DNS circulam encriptados e encapsulados em ESP.
 
-<img src="imagens/teste-ping.png" width="700" alt="Ping do PC-Porto-2 para o servidor de Lisboa">
+<img src="imagens/teste-ping.png" width="600" alt="Ping do PC-Porto-2 para o servidor de Lisboa">
 
 *Ping do PC-Porto-2 para 192.168.10.10, com 0% de perda de pacotes (TC02).*
 
-<img src="imagens/teste-inspecao-esp.png" width="600" alt="Inspeção de pacotes ESP no pfSense-Porto">
+<img src="imagens/teste-inspecao-esp.png" width="400" alt="Inspeção de pacotes ESP no pfSense-Porto">
 
 *Inspeção de pacotes na interface WAN do pfSense-Porto: o tráfego circula encriptado em ESP (TC08).*
 
